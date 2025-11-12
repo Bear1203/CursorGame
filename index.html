@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打磚塊遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>打磚塊遊戲</h1>
+            <div class="score-board">
+                <div class="score">得分: <span id="score">0</span></div>
+                <div class="lives">生命: <span id="lives">3</span></div>
+                <div class="level">關卡: <span id="level">1</span></div>
+            </div>
+        </div>
+        
+        <div class="game-container">
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOver" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2 id="gameOverTitle">遊戲結束</h2>
+                    <p id="gameOverMessage">最終得分: <span id="finalScore">0</span></p>
+                    <button id="restartBtn" class="btn">重新開始</button>
+                </div>
+            </div>
+            <div id="startScreen" class="overlay">
+                <div class="overlay-content">
+                    <h2>打磚塊遊戲</h2>
+                    <p>使用滑鼠或方向鍵移動擋板</p>
+                    <p>擊破所有磚塊即可過關！</p>
+                    <button id="startBtn" class="btn">開始遊戲</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <p>操作說明：使用滑鼠移動或鍵盤 ← → 方向鍵控制擋板</p>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
+
